@@ -26,6 +26,7 @@ class FirstPage extends StatefulWidget {
   _FirstPagePageState createState() => _FirstPagePageState();
 }
 ```
-2. **mounted** 当调用createState时，一个BuildContext被分派给了这个state。那BuildContext怎么理解呢？其实你可以将BuildContext理解为它所对应的widget在这个渲染树上的一个点
+2. **mounted** 当调用createState时，一个BuildContext被分派给了这个state。那BuildContext怎么理解呢？其实你可以将BuildContext理解为它所对应的widget在这个渲染树上的一个点。
+所有的widget都有mounted这个属性。
 
 
