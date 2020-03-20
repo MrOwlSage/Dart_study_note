@@ -37,7 +37,7 @@ class FirstPage extends StatefulWidget {
 
 6. **didUpdateWidget():** 如果父类的widget有变化并且需要重绘UI的时候会被调用。此方法会带有一个oldWidget的参数，你可以和当前的widge做一下对比来处理一些额外的逻辑。
 
-7
+7 **setState():**
 
 
 
