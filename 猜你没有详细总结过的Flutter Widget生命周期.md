@@ -16,3 +16,4 @@ class TestStlWidget extends StatelessWidget {
 
 ##  StatefulWidget
 与StatelessWidget相反，StatefulWidget是一个可以根据事件或者用户操作进行重绘的widget。在它的生命周期中可以多次的被重绘。下面来看一下StatefulWidget的生命周期
+![WeChatf6883bab3c7b5904adb5c6ae7cf83ba5.png](0)
