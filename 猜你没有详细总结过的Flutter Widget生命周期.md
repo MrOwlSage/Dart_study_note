@@ -43,7 +43,7 @@ class FirstPage extends StatefulWidget {
 
 9. **dispose():** 当state被渲染树永久移除时，会被调用。
 
-10. **mounted = false** state再也不回被重新分配BuildContext，如果再调用
+10. **mounted = false** state再也不回被重新分配BuildContext，如果再调用setState则会抛出异常
 
 
 
