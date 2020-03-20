@@ -41,7 +41,10 @@ class FirstPage extends StatefulWidget {
 
 8. **deactivate():** 当state被从树中移除时会被调用。但是它也有可能被重新插入到一个新的地方
 
-9. **dispose():** 当state被永久移除
+9. **dispose():** 当state被渲染树永久移除时，会被调用。
+
+10. **mounted = false
+
 
 
 
