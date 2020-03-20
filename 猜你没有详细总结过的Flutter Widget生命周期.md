@@ -31,6 +31,6 @@ class FirstPage extends StatefulWidget {
 
 3. **initState():** 这是widget被创建以后在构造函数后，第一个被调用的方法。只调用一次，可以在里面初始化一些数据，以及绑定控制器，订阅一些stream，添加一些监听等等
 
-4. **didChangeDependencies():**这个方法会在initState()方法后立即被调用
+4. **didChangeDependencies():** 这个方法会在initState()方法后立即被调用。
 
 
