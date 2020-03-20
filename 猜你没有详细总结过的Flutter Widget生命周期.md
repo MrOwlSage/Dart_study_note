@@ -39,7 +39,7 @@ class FirstPage extends StatefulWidget {
 
 7. **setState():** 此方会经常被Flutter framework自己或者开发者所实使用，以用来重新构建widget
 
-8. **deactivate()** 当state被从树中移除时会被调用。但是
+8. **deactivate()** 当state被从树中移除时会被调用。但是它也有可能被重新插入到一
 
 
 
