@@ -19,4 +19,5 @@ class TestStlWidget extends StatelessWidget {
 
 ![WeChatf6883bab3c7b5904adb5c6ae7cf83ba5.png](0)
 
-1. **createState():** 当创建一个StatefulWidget
+1. **createState():** 当创建一个StatefulWidget时，会调用一个createState方法来创建State
+
