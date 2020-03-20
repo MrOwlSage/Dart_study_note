@@ -15,4 +15,4 @@ class TestStlWidget extends StatelessWidget {
 ```
 
 ##  StatefulWidget
-
+与StatelessWidget相反，StatefulWidget是一个可以根据事件或者用户操作进行重绘的
