@@ -26,5 +26,5 @@ class FirstPage extends StatefulWidget {
   _FirstPagePageState createState() => _FirstPagePageState();
 }
 ```
-2. **mounted** 
+2. **mounted** 当调用createState时，
 
