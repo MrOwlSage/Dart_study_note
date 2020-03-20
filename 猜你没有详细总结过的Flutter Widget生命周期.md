@@ -33,7 +33,7 @@ class FirstPage extends StatefulWidget {
 
 4. **didChangeDependencies():** 这个方法会在initState()方法后立即被调用。如果是InheritedWidget的StatefuWidget会在数据有变化时也会被调用（此处后期再进行补充）
 
-5. **build()** 这个方法可以说是最重要的一个方法构建widget的方法，
+5. **build()** 这个方法可以说是最重要的一个方法。用来构建widget
 
 
 
