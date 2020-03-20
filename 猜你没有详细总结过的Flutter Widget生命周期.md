@@ -35,7 +35,7 @@ class FirstPage extends StatefulWidget {
 
 5. **build()** 这个方法可以说是最重要的一个方法，用来构建widget。这个方法会再didChangeDependencies()方法后立即被调用。
 
-6. **didUpdateWidget():** 如果父类的widget有变化
+6. **didUpdateWidget():** 如果父类的widget有变化并且需要重绘UI的时候
 
 
 
