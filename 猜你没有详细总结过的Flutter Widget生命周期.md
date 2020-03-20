@@ -26,5 +26,5 @@ class FirstPage extends StatefulWidget {
   _FirstPagePageState createState() => _FirstPagePageState();
 }
 ```
-2. **mounted** 当调用createState时，
+2. **mounted** 当调用createState时，一个buildContext被分派给了这个state
 
