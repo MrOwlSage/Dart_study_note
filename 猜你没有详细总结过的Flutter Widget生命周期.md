@@ -1,2 +1,2 @@
 ## 前言
-在我们日常Flutter开发中，详细大家用的最多的就是StatelessWidget和Statefu
+在我们日常Flutter开发中，详细大家用的最多的就是StatelessWidget和StatefulWidget。那你有么有
