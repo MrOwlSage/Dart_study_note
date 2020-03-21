@@ -32,7 +32,48 @@ class FirstPage extends StatefulWidget {
 3. **initState():** 这是widget被创建以后在构造函数后，第一个被调用的方法。只调用一次，可以在里面初始化一些数据，以及绑定控制器，订阅一些stream，添加一些监听等等
 
 4. **didChangeDependencies():** 这个方法会在initState()方法后立即被调用。如果继承自InheritedWidget的Widget会在数据有变化时其父类的didChangeDependencies也会被调用
-```language
+```dart
+
+class CountDesWidget extends InheritedWidget {
+  final int data; //需要在子树中共享的数据，保存点击次数
+
+  const CountDesWidget({
+    Key key,
+    this.data = 0,
+    @required Widget child,
+  })  : assert(child != null),
+        super(key: key, child: child);
+
+  static CountDesWidget of(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType<CountDesWidget>();
+  }
+
+  @override
+  bool updateShouldNotify(CountDesWidget old) {
+    return false;
+  }
+}
+
+class _TestWidget extends StatefulWidget {
+  @override
+  __TestWidgetState createState() => new __TestWidgetState();
+}
+
+class __TestWidgetState extends State<_TestWidget> {
+  @override
+  Widget build(BuildContext context) {
+    //使用InheritedWidget中的共享数据
+    return Text(CountDesWidget.of(context).data.toString());
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    //父或祖先widget中的InheritedWidget改变(updateShouldNotify返回true)时会被调用。
+    //如果build中没有依赖InheritedWidget，则此回调不会被调用。
+    print(" _TestWidget dependencies change");
+  }
+}
 
 ```
 
