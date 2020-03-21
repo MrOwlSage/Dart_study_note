@@ -45,7 +45,8 @@ class FirstPage extends StatefulWidget {
 
 10. **mounted = false** state再也不回被重新分配BuildContext，如果再调用setState则会抛出异常
 
-
+## WidgetsBindingObserver
+如果我们想知道应用什么时候进入后台，什么时候
 
 
 
