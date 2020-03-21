@@ -38,6 +38,45 @@ class FirstPage extends StatefulWidget {
 6. **didUpdateWidget():** 如果父类的widget有变化并且需要重绘UI的时候会被调用。此方法会带有一个oldWidget的参数，你可以和当前的widge做一下对比来处理一些额外的逻辑。
 ```dart
 
+class SecondPageState extends State<SecondPage> {
+  int _counter = 0;
+
+  @override
+  void initState() {
+    print("second page initState......");
+
+    super.initState();
+  }
+
+  //绘制界面
+  @override
+  Widget build(BuildContext context) {
+    print("second page build......");
+    return Scaffold(
+      appBar: AppBar(title: Text("setState demo")),
+      body: Center(
+          child: CountDesWidget(
+        data: _counter,
+        child: Column(
+          children: <Widget>[
+            RaisedButton(
+              onPressed: () {
+                setState(() {
+                  // 此处在调用setState时，会触发CountWidget的didUpdateWidget的方法
+                  _counter++;
+                });
+              },
+              child: CountWidget(count: _counter),
+            ),
+          ],
+        ),
+      )),
+    );
+  }
+}
+
+
+
 ```
 
 
