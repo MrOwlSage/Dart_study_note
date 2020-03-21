@@ -49,7 +49,14 @@ class FirstPage extends StatefulWidget {
 如果我们想知道应用什么时候进入后台，什么时候又进入到前台，有什么方法可以监测到呢？接下来我告诉大家怎么做。
 只要我们实现WidgetsBindingObserver，来对应用的生命周期进行观测就好
 ```dart
+class _FirstPagePageState extends State<FirstPage> with WidgetsBindingObserver {
+  @override
+  void initState() {
+    super.initState();
+    print("first page initState......");
+    WidgetsBinding.instance.addObserver(this); //注册监听器
 
+}
 
 ```
 
