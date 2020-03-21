@@ -55,8 +55,23 @@ class _FirstPagePageState extends State<FirstPage> with WidgetsBindingObserver {
     super.initState();
     print("first page initState......");
     WidgetsBinding.instance.addObserver(this); //注册监听器
-
 }
+
+  //当State对象从树中被永久移除时调用；通常在此回调中释放资源
+  @override
+  void dispose() {
+    super.dispose();
+    WidgetsBinding.instance.removeObserver(this); //移除监听器
+  }
+
+  //监听App生命周期回调
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) async {
+    print("$state");
+    if (state == AppLifecycleState.resumed) {
+
+    }
+  }
 
 ```
 
