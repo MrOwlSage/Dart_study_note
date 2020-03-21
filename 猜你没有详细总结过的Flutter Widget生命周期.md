@@ -66,6 +66,14 @@ class _FirstPagePageState extends State<FirstPage> with WidgetsBindingObserver {
   void dispose() {
     super.dispose();
     WidgetsBinding.instance.removeObserver(this); //移除监听器
+
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      print("first page 单次Frame绘制回调"); //只回调一次
+    });
+
+    WidgetsBinding.instance.addPersistentFrameCallback((_) {
+      print("first page 实时Frame绘制回调"); //每帧都回调
+    });
   }
 
   //监听App生命周期回调
