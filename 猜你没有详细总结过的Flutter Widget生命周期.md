@@ -35,7 +35,7 @@ class FirstPage extends StatefulWidget {
 
 5. **build()** 这个方法可以说是最重要的一个方法，用来构建widget。这个方法会再didChangeDependencies()方法后立即被调用。
 
-6. **didUpdateWidget():** 如果父类的widget有变化并且需要重绘UI的时候会被调用。此方法会带有一个oldWidget的参数，你可以和当前的widge做一下对比来处理一些额外的逻辑。
+6. **didUpdateWidget():** 如果父类的widget有变化并且需要重绘UI的时候会被调用。此方法会带有一个oldWidget的参数，你可以和当前的widge做一下对比来处理一些额外的逻辑。此处贴上核心示例代码：
 ```dart
 
 class SecondPageState extends State<SecondPage> {
@@ -84,6 +84,8 @@ class CountWidget extends StatefulWidget {
 }
 
 class _CountWidgetState extends State<CountWidget> {
+
+......
   //绘制界面
   @override
   Widget build(BuildContext context) {
@@ -94,13 +96,6 @@ class _CountWidgetState extends State<CountWidget> {
     );
   }
 
-  //当Widget第一次插入到Widget树时会被调用。对于每一个State对象，Flutter只会调用该回调一次
-  @override
-  void initState() {
-    super.initState();
-    print("CountWidget initState......");
-  }
-
   //状态改变的时候会调用该方法,比如父类调用了setState
   @override
   void didUpdateWidget(CountWidget oldWidget) {
@@ -109,6 +104,7 @@ class _CountWidgetState extends State<CountWidget> {
   }
 }
 
+......
 ```
 
 
