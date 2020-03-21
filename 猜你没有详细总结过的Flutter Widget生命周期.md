@@ -75,7 +75,39 @@ class SecondPageState extends State<SecondPage> {
   }
 }
 
+class CountWidget extends StatefulWidget {
+  final int count;
+  CountWidget({Key key, this.count}) : super(key: key);
 
+  @override
+  _CountWidgetState createState() => _CountWidgetState();
+}
+
+class _CountWidgetState extends State<CountWidget> {
+  //绘制界面
+  @override
+  Widget build(BuildContext context) {
+    print("CountWidget build......");
+    return Text(
+      '点击按钮查看状态变化 count: ${widget.count}',
+      style: TextStyle(color: Colors.black),
+    );
+  }
+
+  //当Widget第一次插入到Widget树时会被调用。对于每一个State对象，Flutter只会调用该回调一次
+  @override
+  void initState() {
+    super.initState();
+    print("CountWidget initState......");
+  }
+
+  //状态改变的时候会调用该方法,比如父类调用了setState
+  @override
+  void didUpdateWidget(CountWidget oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    print("CountWidget didUpdateWidget......");
+  }
+}
 
 ```
 
