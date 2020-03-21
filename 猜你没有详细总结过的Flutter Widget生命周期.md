@@ -199,6 +199,7 @@ class _FirstPagePageState extends State<FirstPage> with WidgetsBindingObserver {
 
 ```
 详细的示例代码请移步
+[Demo](https://github.com/zhao19880827/flutter_study_note)
 
 
 
