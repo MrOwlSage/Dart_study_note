@@ -198,7 +198,7 @@ class _FirstPagePageState extends State<FirstPage> with WidgetsBindingObserver {
   }
 
 ```
-
+详细的示例代码请移步
 
 
 
